@@ -1,0 +1,281 @@
+{
+    "languages": {
+        "tr": {
+            "panel": {
+                "orderItem": "Sipariş Ver",
+                "orderBoxItem": "Sipariş Sepetim",
+                "accountItem": "Hesabım",
+                "addressItem": "Adreslerim",
+                "myOrdersItem": "Siparişlerim",
+                "helpItem": "Yardım",
+                "infoItem": "Hakkında",
+                "messageItem": "Mesaj Kutusu",
+                "logoutItem": "Çıkış",
+                "loginItem": "Giriş"
+            },
+            "main": {
+                "allmanufacturers": "Üreticiler",
+                "catalogue": "Ürünler",
+                "cancelBtn": "Vazgeç",
+                "searchPlc": "Arama",
+                "nothingFound": "Bulunamadı",
+                "mainSlogan": "Ne sipariş vermek istersiniz?"
+            },
+            "login": {
+                "cardHeader": "Kullanıcı Girişi",
+                "pass": "Parola",
+                "btnlogin": "Giriş",
+                "btnregister": "Yeni Üye Kayıt"
+            },
+            "check_out":{
+                "pageTitle":"Ödemeyi Tamamla",
+                "pass": "Parola",
+                "btnlogin": "Giriş",
+                "btnregister": "Yeni Üye Kayıt",
+                "loginTab":"Oturum Aç",
+                "adresTab":"Adres",
+                "cargoTab":"Kargolama",
+                "paymentTab":"Ödeme"
+            },
+            "account": {
+                "panelTitle": "Hesabım",
+                "firstname": "Ad",
+                "surname": "Soyad",
+                "email": "E-mail",
+                "password": "Parola",
+                "repeatpassword": "Parola (Onay)",
+                "birthday": "Doğum Günü",
+                "gender": "Cinsiyet",
+                "male": "Erkek",
+                "female": "Kadın",
+                "optin": "Özel Teklifler Al",
+                "newsletter": "Haber Bülteni Al",
+                "btnName": "Kaydet"
+            },
+            "register": {
+                "firstname": "Ad",
+                "surname": "Soyad",
+                "email": "E-mail",
+                "password": "Parola",
+                "repeatpassword": "Parola (Onay)",
+                "birthday": "Doğum Günü",
+                "gender": "Cinsiyet",
+                "male": "Erkek",
+                "female": "Kadın",
+                "pageTitle": "Kayıt Ekranı",
+                "btnName": "Kaydet",
+                "toolbarText": "Tamam"
+            },
+            "manufacturers_menu": {
+                "pageTitle": "Baklava7"
+            },
+            "messages": {
+                "pageTitle": "Mesajlar",
+                "btnSend": "Gönder",
+                "msgPlaceholder": "Mesaj"
+            },
+            "add_address": {
+                "btnName": "Kaydet",
+                "pageTitle": "Adres Ekle",
+                "firstname": "Ad*",
+                "surname": "Soyad*",
+                "homephone": "Telefon",
+                "mobilephone": "Cep Telefonu*",
+                "address": "Adres*",
+                "address2": "Adres(2. Satır)",
+                "alias": "Adres Başlığı",
+                "zipcode": "Posta Kodu*",
+                "city": "Şehir*",
+                "countryPlc": "Ülke*",
+                "country": "Almanya",
+                "vatNo": "Kdv Numarası",
+                "company": "Şirket"
+            },
+            "update_address": {
+                "btnName": "Kaydet",
+                "pageTitle": "Adres Güncelleme",
+                "firstname": "Ad*",
+                "surname": "Soyad*",
+                "homephone": "Telefon",
+                "mobilephone": "Cep Telefonu*",
+                "address": "Adres*",
+                "address2": "Adres(2. Satır)",
+                "alias": "Adres Başlığı",
+                "zipcode": "Posta Kodu*",
+                "city": "Şehir*",
+                "countryPlc": "Ülke*",
+                "country": "Almanya",
+                "vatNo": "Kdv Numarası",
+                "company": "Şirket"
+            },
+            "my_addresses": {
+                "deleteBtn": "Sil"
+            },
+            "alertMessages": {
+                "info": "Bilgi",
+                "warning": "Uyarı",
+                "error": "Hata",
+                "requiredField": "Lütfen zorunlu alanları doldurunuz",
+                "passwordValidation": "Parola en az 5 karakterden oluşmalıdır",
+                "passwordMatch": "Parolalar eşleşmedi, lütfen kontrol ediniz",
+                "updateOk": "Kullanıcı hesabınız başarı ile güncellenmiştir",
+                "mailNotAvailable": "Mail adresi daha önceden kayıtlıdır",
+                "mailNotOk": "Lütfen geçerli bir E-mail adresi girin",
+                "msgSendError": "Mesaj gönderilirken bir hata oluştu, daha sonra tekrar deneyin",
+                "delAdrTitle": "Adres Silme",
+                "delAdrText": "Adres silme işlemini onaylıyormusunuz?",
+                "delAdrOkBtn": "Evet",
+                "delAdrCancelBtn": "Hayır",
+                "delAdrError": "Adres silinemedi",
+                "addressError": "Adres eklenemedi",
+                "zipcodeError": "Geçersiz Posta Kodu"
+            },
+            "product_details":{
+                "priceLbl":"Fiyat:",
+                "numberLbl":"Adet:",
+                "priceDesc":" (Vergi Dahil)",
+                "weightLbl":"Ağırlık:",
+                "weightSelect":"Seçiniz",
+                "addToBasket":"Sepete Ekle",
+                "infoTab":"Bilgi",
+                "nutriValTab":"Besin Değerleri",
+                "manufactLbl":"Üretici:"
+            }
+        },
+        "de": {
+            "panel": {
+                "orderItem": "Bestellen",
+                "orderBoxItem": "Einkaufskorb",
+                "accountItem": "Mein Account",
+                "addressItem": "Meine Adressen",
+                "myOrdersItem": "Meine Bestellungen",
+                "helpItem": "Hilfe",
+                "infoItem": "Über Baklava7",
+                "messageItem": "Postfach",
+                "logoutItem": "Logout",
+                "loginItem": "Login"
+            },
+            "main": {
+                "allmanufacturers": "Partnerhäuser",
+                "catalogue": "Produktliste",
+                "cancelBtn": "Abbrechen",
+                "searchPlc": "Suchen",
+                "nothingFound": "",
+                "mainSlogan": ""
+            },
+            "login": {
+                "cardHeader": "Login",
+                "pass": "Passwort",
+                "btnlogin": "Login",
+                "btnforgetpass": "Passwort vergessen",
+                "btnregister": "Registrieren"
+            },
+            "check_out":{"pageTitle":"De"
+            },
+            "account": {
+                "panelTitle": "Mein Account",
+                "firstname": "Vorname(n)",
+                "surname": "Name",
+                "email": "E-mail",
+                "password": "Passwort",
+                "repeatpassword": "Passwort wiederholen",
+                "birthday": "Geburtstag",
+                "gender": "Geschlecht",
+                "male": "Mann",
+                "female": "Frau",
+                "optin": "Aktionen und Rabatte abonnieren",
+                "newsletter": "Newsletter abonnieren",
+                "btnName": "Spreichern"
+            },
+            "register": {
+                "firstname": "Vorname(n)",
+                "surname": "Name",
+                "email": "E-mail",
+                "password": "Passwort",
+                "repeatpassword": "Passwort wiederholen",
+                "birthday": "Geburtstag",
+                "gender": "Geschlecht",
+                "male": "Mann",
+                "female": "Frau",
+                "pageTitle": "Registrierung",
+                "btnName": "Speichern",
+                "toolbarText": "Erledigt"
+            },
+            "manufacturers_menu": {
+                "pageTitle": "Baklava7"
+            },
+            "messages": {
+                "pageTitle": "Postfach",
+                "btnSend": "Senden",
+                "msgPlaceholder": "Nachricht"
+            },
+            "add_address": {
+                "btnName": "Speichern",
+                "pageTitle": "Adresse hinzufügen",
+                "firstname": "Vorname*",
+                "surname": "Name*",
+                "homephone": "Festnetz",
+                "mobilephone": "Mobilnummer*",
+                "address": "Adresszeile 1*",
+                "address2": "Adresszeile 2",
+                "alias": "Adressüberschrift",
+                "zipcode": "PLZ*",
+                "city": "Ort*",
+                "countryPlc": "Deutschland*",
+                "country": "Deutschland",
+                "vatNo": "Wenn vorhanden USt-IdNr.",
+                "company": "Wenn vorhanden Firma"
+            },
+            "update_address": {
+                "btnName": "Speichern",
+                "pageTitle": "Adresse aktualisieren",
+                "firstname": "Vorname*",
+                "surname": "Name*",
+                "homephone": "Festnetz",
+                "mobilephone": "Mobilnummer*",
+                "address": "Adresszeile 1*",
+                "address2": "Adresszeile 2",
+                "alias": "Adressüberschrift",
+                "zipcode": "PLZ*",
+                "city": "Ort*",
+                "countryPlc": "Deutschland*",
+                "country": "Deutschland",
+                "vatNo": "Wenn vorhanden USt-IdNr.",
+                "company": "Wenn vorhanden Firma"
+            },
+            "my_addresses": {
+                "deleteBtn": "Löschen"
+            },
+            "alertMessages": {
+                "info": "Info",
+                "warning": "Hinweis",
+                "error": "Fehler",
+                "requiredField": "Die mit markierten Felder sind Pflichtfelder!",
+                "passwordValidation": "Das Passwort muss mindestens 5 Zeichen umfassen.",
+                "passwordMatch": "Passwort stimmt nicht überein",
+                "updateOk": "Ihr Profil wurde erfolgreich aktualisiert.",
+                "mailNotAvailable": "Diese E-Mail-Adresse wird bereits verwendet. Probieren Sie eine andere aus.",
+                "mailNotOk": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+                "msgSendError": "Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
+                "delAdrTitle": "Adresse löschen",
+                "delAdrText": "Möchten Sie diese Adresse wirklich löschen?",
+                "delAdrOkBtn": "Ja",
+                "delAdrCancelBtn": "Nein",
+                "delAdrError": "Adresse konnte nicht gelöscht werden",
+                "addressError": "Adresse konnte nicht hinzugefügt werden",
+                "zipcodeError": "PLZ ist ungültig"
+            },
+            "product_details":{
+                "priceLbl":"Preis:",
+                "numberLbl":"Menge:",
+                "priceDesc":" (inkl. MwSt.)",
+                "weightLbl":"Gewicht:",
+                "weightSelect":"wählen",
+                "addToBasket":"In Den Warenkorb",
+                "infoTab":"Mehr Infos",
+                "nutriValTab":"Nährwerte und Zutaten",
+                "manufactLbl":"Hersteller:"
+            }
+        }
+    }
+}

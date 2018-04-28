@@ -1,17 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.baklava7.manufacturer" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
-    <feature name="Camera">
-        <param name="browser-package" value="Camera" />
-    </feature>
-    <feature name="Device">
-        <param name="browser-package" value="Device" />
-    </feature>
-    <name>mms02</name>
+<widget id="com.mms.baklava7" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Deneme</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Deneme.De Mobil Uygulaması
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="info@kivancekici.com" href="http://kivancekici.com">
+        M.Sc. Computer Engineer Suleyman Kivanc Ekici
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -21,6 +15,12 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon platform="android" qualifier="ldpi" src="images/icons/mipmap-mdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="mdpi" src="images/icons/mipmap-mdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="hdpi" src="images/icons/mipmap-hdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="xhdpi" src="images/icons/mipmap-xhdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="xxhdpi" src="images/icons/mipmap-xxhdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="xxxhdpi" src="images/icons/mipmap-xxxhdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="fr-xxhdpi" src="images/icons/mipmap-xxxhdpi/ic_launcher.png" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="14" />
 </widget>

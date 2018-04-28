@@ -1,73 +1,27 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.mms.baklava7"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.mms.baklava7"
     },
-    "installed_plugins": {
-        "cordova-plugin-battery-status": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-media-capture": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-contacts": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-device-motion": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-device-orientation": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-vibration": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        }
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.mms.baklava7"
     },
-    "dependent_plugins": {
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.baklava7.manufacturer"
-        }
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.mms.baklava7"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.mms.baklava7"
     }
+  },
+  "dependent_plugins": {}
 }
