@@ -350,14 +350,14 @@ $$(document).on('pageInit', function(e) {
 
 
                 toDataURL('./images/indir.bmp', function(dataUrl) {
-                    dataURL.replace("x-ms-", "");
+                    dataUrl.replace(/^data:image\/(x-ms-bmp|jpg);base64,/, "");
                     myApp.alert(dataUrl);
                 });
 
                 if (bool == true) {
 
                     toDataURL('./images/indir.bmp', function(dataUrl) {
-                        dataURL.replace(/^data:image\/(bmp|jpg);base64,/, "");
+                        dataUrl.replace(/^data:image\/(x-ms-bmp|jpg);base64,/, "");
                         cordova.plugins.brotherPrinter.printViaSDK(dataUrl, function(error) {
                             myApp.alert(error);
                         });
