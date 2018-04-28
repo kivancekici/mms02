@@ -275,6 +275,15 @@ $$('#btnLogout').on('click', function() {
 
 });
 
+function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+    var dataURL = canvas.toDataURL("image/bmp");
+    return dataURL.replace(/^data:image\/(bmp|jpg);base64,/, "");
+}
 
 
 $$('#btnLogin').on('click', function() {
@@ -282,9 +291,10 @@ $$('#btnLogin').on('click', function() {
     cordova.plugins.brotherPrinter.findNetworkPrinters(function(bool, printers) {
         myApp.alert(bool + '\n' + printers);
 
+        var base64 = getBase64Image(document.getElementById("imageid"));
 
         if (bool == true) {
-            cordova.plugins.brotherPrinter.printViaSDK('./images/indir.bmp', function(error) {
+            cordova.plugins.brotherPrinter.printViaSDK(base64, function(error) {
                 myApp.alert(error);
             });
         }
