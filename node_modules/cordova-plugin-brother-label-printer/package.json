@@ -1,0 +1,52 @@
+{
+  "_from": "git+https://github.com/MenelicSoftware/cordova-plugin-brother-label-printer.git",
+  "_id": "cordova-plugin-brother-label-printer@1.0.0",
+  "_inBundle": false,
+  "_location": "/cordova-plugin-brother-label-printer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/MenelicSoftware/cordova-plugin-brother-label-printer.git",
+    "rawSpec": "https://github.com/MenelicSoftware/cordova-plugin-brother-label-printer.git",
+    "saveSpec": "git+https://github.com/MenelicSoftware/cordova-plugin-brother-label-printer.git",
+    "fetchSpec": "https://github.com/MenelicSoftware/cordova-plugin-brother-label-printer.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/MenelicSoftware/cordova-plugin-brother-label-printer.git#81026b17a271afacb49be0edc04bc7b5b76f61fd",
+  "_spec": "https://github.com/MenelicSoftware/cordova-plugin-brother-label-printer.git",
+  "_where": "C:\\Users\\Aşkın Sağlam\\Desktop\\Projeler\\mms02",
+  "author": {
+    "name": "mohamed.benaida forked from gordol"
+  },
+  "bugs": {
+    "url": "https://github.com/MenelicSoftware/cordova-plugin-brother-label-printer/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Cordova plugin for brother label printers",
+  "homepage": "https://github.com/MenelicSoftware/cordova-plugin-brother-label-printer#readme",
+  "keywords": [
+    "cordova",
+    "plugin",
+    "brother",
+    "label",
+    "printer",
+    "sql",
+    "820"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "cordova-plugin-brother-label-printer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MenelicSoftware/cordova-plugin-brother-label-printer.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

@@ -24,6 +24,9 @@
     },
     "com.threescreens.cordova.plugin.brotherPrinter": {
       "PACKAGE_NAME": "com.mms.baklava7"
+    },
+    "cordova-plugin-brother-label-printer": {
+      "PACKAGE_NAME": "com.mms.baklava7"
     }
   },
   "dependent_plugins": {}

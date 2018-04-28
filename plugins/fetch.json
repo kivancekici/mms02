@@ -46,5 +46,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-brother-label-printer": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/MenelicSoftware/cordova-plugin-brother-label-printer.git"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

@@ -797,8 +797,6 @@ $$(document).on('pageInit', function(e) {
 
         initPageProductDetails();
 
-        var x = findNetworkPrinters();
-        myApp.alert(x, x[0]);
     }
 
     if (page.name === 'messages') {

@@ -54,6 +54,15 @@ module.exports = [
             "plugin.brotherPrinter",
             "cordova.plugins.brotherPrinter"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-brother-label-printer/www/printer.js",
+        "id": "cordova-plugin-brother-label-printer.BrotherPrinter",
+        "pluginId": "cordova-plugin-brother-label-printer",
+        "clobbers": [
+            "plugin.brotherPrinter",
+            "cordova.plugins.brotherPrinter"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -64,7 +73,8 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "1.0.1",
     "cordova-plugin-inappbrowser": "2.0.2",
     "cordova-plugin-network-information": "1.3.4",
-    "com.threescreens.cordova.plugin.brotherPrinter": "0.0.3"
+    "com.threescreens.cordova.plugin.brotherPrinter": "0.0.3",
+    "cordova-plugin-brother-label-printer": "0.0.6"
 }
 // BOTTOM OF METADATA
 });
