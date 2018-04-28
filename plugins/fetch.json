@@ -38,5 +38,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "com.threescreens.cordova.plugin.brotherPrinter": {
+    "source": {
+      "type": "registry",
+      "id": "git+https://github.com/gordol/cordova-brother-label-printer.git"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

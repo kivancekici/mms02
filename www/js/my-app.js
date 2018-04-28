@@ -794,7 +794,11 @@ $$(document).on('pageInit', function(e) {
     }
 
     if (page.name === 'product_details') {
+
         initPageProductDetails();
+
+        var x = findNetworkPrinters();
+        myApp.alert(x, x[0]);
     }
 
     if (page.name === 'messages') {

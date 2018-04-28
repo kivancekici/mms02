@@ -21,6 +21,9 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.mms.baklava7"
+    },
+    "com.threescreens.cordova.plugin.brotherPrinter": {
+      "PACKAGE_NAME": "com.mms.baklava7"
     }
   },
   "dependent_plugins": {}
