@@ -278,7 +278,7 @@ $$('#btnLogout').on('click', function() {
 
 $$('#btnLogin').on('click', function() {
     myApp.alert('Hello mama');
-    var plugin = new BrotherPrinter();
+
     var x = plugin.findNetworkPrinters();
     myApp.alert(x);
 });
