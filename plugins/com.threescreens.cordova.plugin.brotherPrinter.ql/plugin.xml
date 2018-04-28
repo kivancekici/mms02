@@ -34,6 +34,7 @@
 
         <source-file src="src/android/BrotherPrinter.java" target-dir="src/com/threescreens/cordova/plugin/brotherPrinter" />
         <source-file src="src/android/libs/BrotherPrintLibrary.jar" target-dir="libs" />
+        <source-file src="src/android/libs/MobilePrintLib.jar" target-dir="libs" />
         <source-file src="src/android/libs/armeabi" target-dir="libs" />
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
