@@ -276,18 +276,23 @@ $$('#btnLogout').on('click', function() {
 });
 
 
+
 $$('#btnLogin').on('click', function() {
-    myApp.alert('Hello mama');
 
     cordova.plugins.brotherPrinter.findNetworkPrinters(function(bool, printers) {
         myApp.alert(bool + '\n' + printers);
-        /*
+
+        var dataUri;
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+            dataUri = canvas.toDataURL();
+        });
+
         if (bool == true) {
-            cordova.plugins.brotherPrinter.printViaSDK(img, function (error) {
-                alert(error);
+            cordova.plugins.brotherPrinter.printViaSDK(dataUri, function(error) {
+                myApp.alert(error);
             });
         }
-        */
+
     });
 });
 
