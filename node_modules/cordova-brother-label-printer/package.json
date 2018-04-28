@@ -1,29 +1,29 @@
 {
-  "_from": "git+https://github.com/gordol/cordova-brother-label-printer.git",
+  "_from": "git+https://github.com/askinsaglam/cordova-brother-printer-ql.git",
   "_id": "cordova-brother-label-printer@0.0.3",
   "_inBundle": false,
   "_location": "/cordova-brother-label-printer",
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "https://github.com/gordol/cordova-brother-label-printer.git",
-    "rawSpec": "https://github.com/gordol/cordova-brother-label-printer.git",
-    "saveSpec": "git+https://github.com/gordol/cordova-brother-label-printer.git",
-    "fetchSpec": "https://github.com/gordol/cordova-brother-label-printer.git",
+    "raw": "https://github.com/askinsaglam/cordova-brother-printer-ql.git",
+    "rawSpec": "https://github.com/askinsaglam/cordova-brother-printer-ql.git",
+    "saveSpec": "git+https://github.com/askinsaglam/cordova-brother-printer-ql.git",
+    "fetchSpec": "https://github.com/askinsaglam/cordova-brother-printer-ql.git",
     "gitCommittish": null
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "git+https://github.com/gordol/cordova-brother-label-printer.git#86e822dc0df068de162cb403647ce9a2b480e03e",
-  "_spec": "https://github.com/gordol/cordova-brother-label-printer.git",
+  "_resolved": "git+https://github.com/askinsaglam/cordova-brother-printer-ql.git#b717853186c944a51d01d93facc45685ba23cc36",
+  "_spec": "https://github.com/askinsaglam/cordova-brother-printer-ql.git",
   "_where": "C:\\Users\\Aşkın Sağlam\\Desktop\\Projeler\\mms02",
   "author": {
     "name": "Thomas Gordon Lowrey IV"
   },
   "bugs": {
-    "url": "https://github.com/gordol/cordova-brother-label-printer/issues"
+    "url": "https://github.com/askinsaglam/cordova-brother-printer-ql/issues"
   },
   "bundleDependencies": false,
   "cordova": {
@@ -41,7 +41,7 @@
     "cordova": ">=3.6.0",
     "cordova-android": ">=6.0.0"
   },
-  "homepage": "https://github.com/gordol/cordova-brother-label-printer#readme",
+  "homepage": "https://github.com/askinsaglam/cordova-brother-printer-ql#readme",
   "keywords": [
     "brother",
     "print",
@@ -54,13 +54,13 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/gordol/cordova-brother-label-printer/blob/master/LICENSE"
+      "url": "https://github.com/askinsaglam/cordova-brother-printer-ql/blob/master/LICENSE"
     }
   ],
   "name": "cordova-brother-label-printer",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gordol/cordova-brother-label-printer.git"
+    "url": "git+https://github.com/askinsaglam/cordova-brother-printer-ql.git"
   },
   "version": "0.0.3"
 }

@@ -54,5 +54,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "com.threescreens.cordova.plugin.brotherPrinter.ql": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/askinsaglam/cordova-brother-printer-ql.git"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

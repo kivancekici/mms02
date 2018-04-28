@@ -141,8 +141,7 @@ public class BrotherPrinter extends CordovaPlugin {
                     PluginResult result;
 
                     Boolean available = netPrinterCount > 0;
-                    
-                    available = true;
+
                     args.put(available);
                     args.put(netPrintersList);
 

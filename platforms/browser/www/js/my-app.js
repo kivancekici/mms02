@@ -277,8 +277,18 @@ $$('#btnLogout').on('click', function() {
 
 
 $$('#btnLogin').on('click', function() {
-    loadPageWithLang('login');
-    myApp.closePanel();
+    myApp.alert('Hello mama');
+
+    cordova.plugins.brotherPrinter.findNetworkPrinters(function(bool, printers) {
+        myApp.alert(bool + '\n' + printers);
+        /*
+        if (bool == true) {
+            cordova.plugins.brotherPrinter.printViaSDK(img, function (error) {
+                alert(error);
+            });
+        }
+        */
+    });
 });
 
 
@@ -795,10 +805,9 @@ $$(document).on('pageInit', function(e) {
 
     if (page.name === 'product_details') {
 
+
         initPageProductDetails();
 
-        var x = findNetworkPrinters();
-        myApp.alert(x, x[0]);
     }
 
     if (page.name === 'messages') {
