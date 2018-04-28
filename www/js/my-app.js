@@ -286,6 +286,21 @@ function getBase64Image(img) {
     //  return dataURL.replace(/^data:image\/(bmp|jpg);base64,/, "");
 }
 
+function toDataURL(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            callback(reader.result);
+        }
+        reader.readAsDataURL(xhr.response);
+    };
+    xhr.open('GET', url);
+    xhr.responseType = 'blob';
+    xhr.send();
+}
+
+
 
 $$('#btnLogin').on('click', function() {
 
@@ -331,12 +346,22 @@ $$(document).on('pageInit', function(e) {
             cordova.plugins.brotherPrinter.findNetworkPrinters(function(bool, printers) {
                 myApp.alert(bool + '\n' + printers);
 
-                var base64 = getBase64Image(document.getElementById("imageid"));
+                //var base64 = getBase64Image(document.getElementById("imageid"));
+
+
+                toDataURL('https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0', function(dataUrl) {
+                    myApp.alert(dataUrl);
+                });
 
                 if (bool == true) {
-                    cordova.plugins.brotherPrinter.printViaSDK(base64, function(error) {
-                        myApp.alert(error);
+
+                    toDataURL('https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0', function(dataUrl) {
+
+                        cordova.plugins.brotherPrinter.printViaSDK(dataUrl, function(error) {
+                            myApp.alert(error);
+                        });
                     });
+
                 }
 
             });
