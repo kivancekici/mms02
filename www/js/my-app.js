@@ -355,7 +355,7 @@ $$(document).on('pageInit', function(e) {
                 });
 
                 if (bool == true) {
-                    myApp.alert('hello');
+
                     toDataURL('./images/indir.bmp', function(dataUrl) {
                         dataURL.replace(/^data:image\/(x-ms-bmp|jpg);base64,/, "");
                         cordova.plugins.brotherPrinter.printViaSDK(dataUrl, function(error) {
