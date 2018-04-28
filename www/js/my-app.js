@@ -349,13 +349,13 @@ $$(document).on('pageInit', function(e) {
                 //var base64 = getBase64Image(document.getElementById("imageid"));
 
 
-                toDataURL('https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0', function(dataUrl) {
+                toDataURL('./images/indir.bmp', function(dataUrl) {
                     myApp.alert(dataUrl);
                 });
 
                 if (bool == true) {
 
-                    toDataURL('https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0', function(dataUrl) {
+                    toDataURL('./images/indir.bmp', function(dataUrl) {
 
                         cordova.plugins.brotherPrinter.printViaSDK(dataUrl, function(error) {
                             myApp.alert(error);
