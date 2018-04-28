@@ -349,14 +349,14 @@ $$(document).on('pageInit', function(e) {
                 //var base64 = getBase64Image(document.getElementById("imageid"));
 
 
-                toDataURL('./images/Adsiz.bmp', function(dataUrl) {
+                toDataURL('./images/foto.bmp', function(dataUrl) {
                     //  var res = dataUrl.replace("x-ms-bmp", "bmp");
                     myApp.alert(res);
                 });
 
                 if (bool == true) {
 
-                    toDataURL('./images/Adsiz.bmp', function(dataUrl) {
+                    toDataURL('./images/foto.bmp', function(dataUrl) {
                         var res = dataUrl.replace("x-ms-bmp", "bmp");
                         cordova.plugins.brotherPrinter.printViaSDK(res, function(error) {
                             myApp.alert(error);
