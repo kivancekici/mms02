@@ -282,7 +282,8 @@ function getBase64Image(img) {
     var ctx = canvas.getContext("2d");
     ctx.drawImage(img, 0, 0);
     var dataURL = canvas.toDataURL("image/bmp");
-    return dataURL.replace(/^data:image\/(bmp|jpg);base64,/, "");
+    return dataURL;
+    //  return dataURL.replace(/^data:image\/(bmp|jpg);base64,/, "");
 }
 
 
