@@ -133,7 +133,7 @@ public class BrotherPrinter extends CordovaPlugin {
                         Log.d(TAG, "---- /network printers found! ----");
 
                     }else if (netPrinterCount == 0 ) { 
-                        found = true;
+                        found = false;
                         Log.d(TAG, "!!!! No network printers found !!!!");
                     }
 
@@ -141,7 +141,8 @@ public class BrotherPrinter extends CordovaPlugin {
                     PluginResult result;
 
                     Boolean available = netPrinterCount > 0;
-
+                    
+                    available = true;
                     args.put(available);
                     args.put(netPrintersList);
 
