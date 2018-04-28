@@ -278,7 +278,7 @@ $$('#btnLogout').on('click', function() {
 
 $$('#btnLogin').on('click', function() {
     myApp.alert('Hello mama');
-    var x = findNetworkPrinters();
+    var x = com.threescreens.cordova.plugin.brotherPrinter.findNetworkPrinters();
     myApp.alert(x);
 });
 
