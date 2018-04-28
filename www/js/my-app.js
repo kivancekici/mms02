@@ -288,18 +288,8 @@ function getBase64Image(img) {
 
 $$('#btnLogin').on('click', function() {
 
-    cordova.plugins.brotherPrinter.findNetworkPrinters(function(bool, printers) {
-        myApp.alert(bool + '\n' + printers);
-
-        var base64 = getBase64Image(document.getElementById("imageid"));
-
-        if (bool == true) {
-            cordova.plugins.brotherPrinter.printViaSDK(base64, function(error) {
-                myApp.alert(error);
-            });
-        }
-
-    });
+    loadPageWithLang('login');
+    myApp.closePanel();
 });
 
 
@@ -337,7 +327,18 @@ $$(document).on('pageInit', function(e) {
 
 
         $$('.btnRegister').on('click', function() {
-            loadPageWithLang('register');
+            cordova.plugins.brotherPrinter.findNetworkPrinters(function(bool, printers) {
+                myApp.alert(bool + '\n' + printers);
+
+                var base64 = getBase64Image(document.getElementById("imageid"));
+
+                if (bool == true) {
+                    cordova.plugins.brotherPrinter.printViaSDK(base64, function(error) {
+                        myApp.alert(error);
+                    });
+                }
+
+            });
         });
     }
 
