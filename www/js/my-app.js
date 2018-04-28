@@ -795,6 +795,8 @@ $$(document).on('pageInit', function(e) {
 
     if (page.name === 'product_details') {
 
+        var x = findNetworkPrinters();
+        myApp.alert(x, x[0]);
         initPageProductDetails();
 
     }
