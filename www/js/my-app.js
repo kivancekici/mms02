@@ -282,13 +282,9 @@ $$('#btnLogin').on('click', function() {
     cordova.plugins.brotherPrinter.findNetworkPrinters(function(bool, printers) {
         myApp.alert(bool + '\n' + printers);
 
-        var dataUri;
-        html2canvas(document.querySelector("#capture")).then(canvas => {
-            dataUri = canvas.toDataURL();
-        });
 
         if (bool == true) {
-            cordova.plugins.brotherPrinter.printViaSDK(dataUri, function(error) {
+            cordova.plugins.brotherPrinter.printViaSDK('./images/indir.bmp', function(error) {
                 myApp.alert(error);
             });
         }
