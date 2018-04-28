@@ -279,8 +279,16 @@ $$('#btnLogout').on('click', function() {
 $$('#btnLogin').on('click', function() {
     myApp.alert('Hello mama');
 
-    var x = plugin.findNetworkPrinters();
-    myApp.alert(x);
+    cordova.plugins.brotherPrinter.findNetworkPrinters(function(bool, printers) {
+        myApp.alert(bool + '\n' + printers);
+        /*
+        if (bool == true) {
+            cordova.plugins.brotherPrinter.printViaSDK(img, function (error) {
+                alert(error);
+            });
+        }
+        */
+    });
 });
 
 
