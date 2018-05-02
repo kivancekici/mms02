@@ -275,20 +275,37 @@ $$('#btnLogout').on('click', function() {
 
 });
 
+function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+    var dataURL = canvas.toDataURL("image/bmp");
+    return dataURL;
+    //  return dataURL.replace(/^data:image\/(bmp|jpg);base64,/, "");
+}
+
+function toDataURL(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            callback(reader.result);
+        }
+        reader.readAsDataURL(xhr.response);
+    };
+    xhr.open('GET', url);
+    xhr.responseType = 'blob';
+    xhr.send();
+}
+
+
 
 $$('#btnLogin').on('click', function() {
-    myApp.alert('Hello mama');
 
-    cordova.plugins.brotherPrinter.findNetworkPrinters(function(bool, printers) {
-        myApp.alert(bool + '\n' + printers);
-        /*
-        if (bool == true) {
-            cordova.plugins.brotherPrinter.printViaSDK(img, function (error) {
-                alert(error);
-            });
-        }
-        */
-    });
+    loadPageWithLang('login');
+    myApp.closePanel();
 });
 
 
@@ -326,7 +343,29 @@ $$(document).on('pageInit', function(e) {
 
 
         $$('.btnRegister').on('click', function() {
-            loadPageWithLang('register');
+            cordova.plugins.brotherPrinter.findNetworkPrinters(function(bool, printers) {
+                myApp.alert(bool + '\n' + printers);
+
+                //var base64 = getBase64Image(document.getElementById("imageid"));
+
+
+                toDataURL('./images/foto.bmp', function(dataUrl) {
+                    //  var res = dataUrl.replace("x-ms-bmp", "bmp");
+                    myApp.alert(res);
+                });
+
+                if (bool == true) {
+
+                    toDataURL('./images/foto.bmp', function(dataUrl) {
+                        var res = dataUrl.replace("x-ms-bmp", "bmp");
+                        cordova.plugins.brotherPrinter.printViaSDK(res, function(error) {
+                            myApp.alert(error);
+                        });
+                    });
+
+                }
+
+            });
         });
     }
 

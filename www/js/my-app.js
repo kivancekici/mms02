@@ -283,22 +283,10 @@ function getBase64Image(img) {
     ctx.drawImage(img, 0, 0);
     var dataURL = canvas.toDataURL("image/bmp");
     return dataURL;
-    //  return dataURL.replace(/^data:image\/(bmp|jpg);base64,/, "");
+    return dataURL.replace(/^data:image\/(bmp|jpg);base64,/, "");
 }
 
-function toDataURL(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.onload = function() {
-        var reader = new FileReader();
-        reader.onloadend = function() {
-            callback(reader.result);
-        }
-        reader.readAsDataURL(xhr.response);
-    };
-    xhr.open('GET', url);
-    xhr.responseType = 'blob';
-    xhr.send();
-}
+
 
 
 
@@ -346,23 +334,13 @@ $$(document).on('pageInit', function(e) {
             cordova.plugins.brotherPrinter.findNetworkPrinters(function(bool, printers) {
                 myApp.alert(bool + '\n' + printers);
 
-                //var base64 = getBase64Image(document.getElementById("imageid"));
-
-
-                toDataURL('./images/foto.bmp', function(dataUrl) {
-                    //  var res = dataUrl.replace("x-ms-bmp", "bmp");
-                    myApp.alert(res);
-                });
-
                 if (bool == true) {
 
-                    toDataURL('./images/foto.bmp', function(dataUrl) {
-                        var res = dataUrl.replace("x-ms-bmp", "bmp");
-                        cordova.plugins.brotherPrinter.printViaSDK(res, function(error) {
-                            myApp.alert(error);
-                        });
+                    var base64 = getBase64Image(document.getElementById("imageid"));
+                    myApp.alert(base64);
+                    cordova.plugins.brotherPrinter.printViaSDK(base64, function(error) {
+                        myApp.alert(error);
                     });
-
                 }
 
             });

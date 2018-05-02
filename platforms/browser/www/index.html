@@ -12,7 +12,7 @@
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
     <!-- Aşkın http post request için kapattı. -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="lib/framework7/css/framework7.icons.css">
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    
+
 </head>
 
 <body class="">
@@ -134,7 +134,7 @@
                     </div>
                 </div>
             </a>
-            
+
             <a id="btnLogin" href="#" class="item-link">
                 <div class="item-content">
                     <div class="item-media itemLogo"><i class="f7-icons">login</i></div>
@@ -165,7 +165,7 @@
                         <div class="content-block cntbottom">
                             <div style="margin-bottom: 13px;" class="row">
                                 <div class="col-33"></div>
-                            <!-- <div class="col-33 splashindicator"><span style="width:36px; height:36px" class="preloader"></span></div> -->
+                                <!-- <div class="col-33 splashindicator"><span style="width:36px; height:36px" class="preloader"></span></div> -->
                                 <div class="col-33"></div>
                             </div>
                         </div>
@@ -189,6 +189,7 @@
     <script type="text/javascript" src="js/mobile-cart.js"></script>
     <script type="text/javascript" src="js/pages/product_details.js"></script>
     <script type="text/javascript" src="js/payment.js"></script>
+    <script type="text/javascript" src="lib/html2canvas.min.js"></script>
 
 </body>
 
