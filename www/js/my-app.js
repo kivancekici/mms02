@@ -282,7 +282,7 @@ function getBase64Image(img) {
     var ctx = canvas.getContext("2d");
     ctx.drawImage(img, 0, 0);
     var dataURL = canvas.toDataURL("image/bmp");
-    return dataURL;
+    myApp.alert(dataURL);
     return dataURL.replace(/^data:image\/(bmp|jpg);base64,/, "");
 }
 
@@ -338,6 +338,7 @@ $$(document).on('pageInit', function(e) {
 
                     var base64 = getBase64Image(document.getElementById("imageid"));
                     myApp.alert(base64);
+
                     cordova.plugins.brotherPrinter.printViaSDK(base64, function(error) {
                         myApp.alert(error);
                     });
