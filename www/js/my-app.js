@@ -327,8 +327,9 @@ $$(document).on('pageInit', function(e) {
                 myApp.alert(bool + '\n' + printers);
 
                 if (bool == true) {
-
-                    cordova.plugins.brotherPrinter.printViaSDK(baseimg2, function(statusCode) {
+                    var data = baseimg2.replace(/^data:image\/\w+;base64,/, "");
+                    myApp.alert(data);
+                    cordova.plugins.brotherPrinter.printViaSDK(data, function(statusCode) {
                         console.log(statusCode);
                     });
                 }
