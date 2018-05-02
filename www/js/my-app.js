@@ -327,10 +327,10 @@ $$(document).on('pageInit', function(e) {
                 myApp.alert(bool + '\n' + printers);
 
                 if (bool == true) {
-                    var data = baseimg2.replace(/^data:image\/\w+;base64,/, "");
+                    var data = baseimg.replace(/^data:image\/\w+;base64,/, "");
                     myApp.alert(data);
                     cordova.plugins.brotherPrinter.printViaSDK(data, function(statusCode) {
-                        console.log(statusCode);
+                        myApp.alert(statusCode);
                     });
                 }
 
