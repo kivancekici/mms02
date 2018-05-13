@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.mms.baklava7" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Deneme</name>
+<widget id="com.manufacturer.baklava7" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Baklava7 Manufacturer</name>
     <description>
-        Deneme.De Mobil Uygulaması
+        Baklava7 Manufacturer App
     </description>
-    <author email="info@kivancekici.com" href="http://kivancekici.com">
-        M.Sc. Computer Engineer Suleyman Kivanc Ekici
+    <author email="saglamaskin@gmail.com" href="https://www.linkedin.com/in/askinsaglam/">
+        Aşkın Sağlam
     </author>
     <content src="index.html" />
     <access origin="*" />
