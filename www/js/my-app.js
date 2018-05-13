@@ -248,6 +248,8 @@ $$(document).on('pageInit', function(e) {
     }
 
     if (page.name === 'main') {
+
+        /*
         var userLoggedIn = window.localStorage.getItem("isLogin");
 
         if (userLoggedIn == "1") {
@@ -258,7 +260,7 @@ $$(document).on('pageInit', function(e) {
         }
 
 
-        /*
+        
 
         if (productResultList == null) {
             productResultList = getSearchResultList(searchKeyWord);
