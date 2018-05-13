@@ -222,6 +222,9 @@ $$(document).on('pageInit', function(e) {
 
     if (page.name === 'login') {
         $$('.btnLogin').on('click', function() {
+
+            loadPageWithLang('main');
+            /*
             var email = $$('#txtEmail').val();
             var pass = $$('#txtPassword').val();
             var response = mobileLogin(email, pass);
@@ -236,11 +239,7 @@ $$(document).on('pageInit', function(e) {
                 window.localStorage.setItem("isLogin", "0");
 
             }
-
-        });
-
-
-        $$('.btnRegister').on('click', function() {
+            */
 
         });
     }
@@ -256,9 +255,8 @@ $$(document).on('pageInit', function(e) {
         }
 
 
+        /*
 
-
-        /*Product listesini doldur*/
         if (productResultList == null) {
             productResultList = getSearchResultList(searchKeyWord);
         }
@@ -267,7 +265,7 @@ $$(document).on('pageInit', function(e) {
         listProductResult.items = productResultList;
         listProductResult.update();
 
-        /*Üreticiler Listesini Doldur*/
+        
         if (manufacturersList == null) {
             manufacturersList = getAllManufacturersList("");
         }
@@ -276,7 +274,7 @@ $$(document).on('pageInit', function(e) {
         listVirtualManufacturers.items = manufacturersList;
         listVirtualManufacturers.update();
 
-
+       */
     }
 
     if (page.name === 'language') {

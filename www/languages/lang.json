@@ -6,18 +6,14 @@
                 "logoutItem": "Çıkış"
             },
             "main": {
-                "allmanufacturers": "Üreticiler",
-                "catalogue": "Ürünler",
-                "cancelBtn": "Vazgeç",
-                "searchPlc": "Arama",
-                "nothingFound": "Bulunamadı",
-                "mainSlogan": "Ne sipariş vermek istersiniz?"
+                "pendingorders": "Bekleyen Siparişler",
+                "acceptedorders": "Kabul Edilen Siparişler",
+                "rejectedorders": "Red Edilen Siparişler"
             },
             "login": {
                 "cardHeader": "Kullanıcı Girişi",
                 "pass": "Parola",
-                "btnlogin": "Giriş",
-                "btnregister": "Yeni Üye Kayıt"
+                "btnlogin": "Giriş"
             },
             "check_out": {
                 "pageTitle": "Ödemeyi Tamamla",
