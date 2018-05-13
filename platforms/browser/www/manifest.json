@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Deneme",
-  "short_name": "Deneme",
-  "version": "com.mms.baklava7",
-  "description": "Deneme.De Mobil Uygulaması",
-  "author": "M.Sc. Computer Engineer Suleyman Kivanc Ekici",
+  "name": "Baklava7 Manufacturer",
+  "short_name": "Baklava7 Manufacturer",
+  "version": "com.manufacturer.baklava7",
+  "description": "Baklava7 Manufacturer App",
+  "author": "Aşkın Sağlam",
   "icons": [
     {
       "src": "images/icons/mipmap-mdpi/ic_launcher.png",

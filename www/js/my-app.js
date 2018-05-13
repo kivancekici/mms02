@@ -222,11 +222,13 @@ $$(document).on('pageInit', function(e) {
 
     if (page.name === 'login') {
 
-        loadPageWithLang('main');
-        /*
+
+
         $$('.btnLogin').on('click', function() {
 
-            
+            loadPageWithLang('main');
+
+            /*
             var email = $$('#txtEmail').val();
             var pass = $$('#txtPassword').val();
             var response = mobileLogin(email, pass);
@@ -241,10 +243,10 @@ $$(document).on('pageInit', function(e) {
                 window.localStorage.setItem("isLogin", "0");
 
             }
-            
+            */
 
         });
-        */
+
     }
 
     if (page.name === 'main') {
