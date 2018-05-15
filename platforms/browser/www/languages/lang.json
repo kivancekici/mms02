@@ -6,9 +6,9 @@
                 "logoutItem": "Çıkış"
             },
             "main": {
-                "pendingorders": "Bekleyen Siparişler",
-                "acceptedorders": "Kabul Edilen Siparişler",
-                "rejectedorders": "Red Edilen Siparişler"
+                "pendingOrders": "Bekleyen Siparişler",
+                "acceptedOrders": "Kabul Edilen Siparişler",
+                "rejectedOrders": "Red Edilen Siparişler"
             },
             "login": {
                 "cardHeader": "Kullanıcı Girişi",

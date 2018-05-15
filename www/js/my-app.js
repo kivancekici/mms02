@@ -71,7 +71,7 @@ function changePanelLanguage() {
     var panelData = myApp.template7Data.languages[selectedLang].panel;
 
     $$('#logoutItem').text(panelData.logoutItem);
-    $$('#btnOrdersHistory').text(panelData.myOrdersHistory);
+    $$('#myOrdersHistory').text(panelData.myOrdersHistory);
 }
 
 
@@ -121,13 +121,11 @@ function checkLoginStatus() {
     try {
         if (userLoggedIn == "1") {
             loadPageWithLang('main');
-            // show all panel items
-            showPanelItems();
+
 
         } else {
             loadPageWithLang('login');
-            // hide some items
-            hidePanelItems();
+
         }
     } catch (e) {
         myApp.alert(e);
@@ -168,12 +166,16 @@ $$(document).on('offline', function() {
 
 
 $$('#btnOrdersHistory').on('click', function() {
+    /*
     loadPageWithLang('orders_history');
-    myApp.closePanel();
+      myApp.closePanel();
+      */
+    var myMedia = new Media('./ringtones/android.mp3');
+    myMedia.play();
 });
 
 
-$$('#btnLogout').on('click', function() {
+$$('#btnLogout').on('*click', function() {
 
     window.localStorage.setItem("isLogin", "0");
     checkLoginStatus();

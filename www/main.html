@@ -1,7 +1,7 @@
-<div data-page="main" class="page navbar-fixed toolbar-fixed tabbar-labels-fixed">
+<div data-page="main" class="page navbar-fixed toolbar-fixed">
     <div class="navbar bg-baklava7 color-white border-baklava7">
         <div class="navbar-inner">
-            <div class="center sliding">
+            <div class="left">
                 <img src="images/navbarlogo2.png" width="70">
             </div>
             <div class="right">
@@ -12,28 +12,31 @@
     </div>
 
 
+
+    <div class="toolbar tabbar tabbar-labels bg-baklava7 color-white border-baklava7">
+        <div class="toolbar-inner">
+            <a href="#tab-1" class="tab-link active">
+                <i class="color-white f7-icons">timer
+                </i>
+                <span class="tabbar-label">{{pendingOrders}}</span>
+            </a>
+            <a href="#tab-2" class="tab-link">
+                <i class="color-white f7-icons">check</i>
+                <span class="tabbar-label">{{acceptedOrders}}</span>
+            </a>
+            <a href="#tab-3" class="tab-link">
+                <i class="color-white f7-icons">close</i>
+                <span class="tabbar-label">{{rejectedOrders}}</span>
+            </a>
+
+        </div>
+    </div>
+
     <!-- Scrollable page content -->
     <div class="lazy lazy-fadein page-content theme-baklava7">
 
 
 
-        <div class="toolbar tabbar tabbar-labels bg-baklava7 color-white border-baklava7">
-            <div class="toolbar-inner">
-                <a href="#tab-1" class="tab-link active">
-                    <i class="color-white f7-icons">timer</i>
-                    <span class="tabbar-label">{{pendingOrders}}</span>
-                </a>
-                <a href="#tab-2" class="tab-link">
-                    <i class="color-white f7-icons">check</i>
-                    <span class="tabbar-label">{{acceptedOrders}}</span>
-                </a>
-                <a href="#tab-3" class="tab-link">
-                    <i class="color-white f7-icons">close</i>
-                    <span class="tabbar-label">{{rejectedOrders}}</span>
-                </a>
-
-            </div>
-        </div>
 
         <div class="tabs-swipeable-wrap">
             <div class="tabs">
@@ -44,6 +47,140 @@
                     </div>
                     <div class="lstpendingorders list-block media-list virtual-list list-block-search searchbar-found theme-baklava7">
                         <!-- keep it empty -->
+                        <ul>
+                            <li class="bg-green">
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title color-white">Facebook</div>
+                                            <div class="item-after color-white">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle color-white">New messages from John Doe</div>
+                                        <div class="item-text color-white">Lorem ipsum dolor sit amet...</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="bg-yellow">
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title color-white">Facebook</div>
+                                            <div class="item-after color-white">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle color-white">New messages from John Doe</div>
+                                        <div class="item-text color-white">Lorem ipsum dolor sit amet...Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit
+                                            ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet ipsum dolor sit amet</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="bg-yellow">
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Facebook</div>
+                                            <div class="item-after">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle">New messages from John Doe</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet...Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit
+                                            ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet ipsum dolor sit amet</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="bg-red">
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Facebook</div>
+                                            <div class="item-after">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle">New messages from John Doe</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet..sadsdsdsadsadsadsa.</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Facebook</div>
+                                            <div class="item-after">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle">New messages from John Doe</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet...Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit
+                                            ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet ipsum dolor sit amet</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Facebook</div>
+                                            <div class="item-after">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle">New messages from John Doe</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet...Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit
+                                            ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet ipsum dolor sit amet</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Facebook</div>
+                                            <div class="item-after">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle">New messages from John Doe</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet...Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit
+                                            ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet ipsum dolor sit amet</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Facebook</div>
+                                            <div class="item-after">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle">New messages from John Doe</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet...Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit
+                                            ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet ipsum dolor sit amet</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Facebook</div>
+                                            <div class="item-after">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle">New messages from John Doe</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet...Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit
+                                            ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet ipsum dolor sit amet</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="bg-red">
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Facebook</div>
+                                            <div class="item-after">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle">New messages from John Doe</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet...Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit
+                                            ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet ipsum dolor sit amet</div>
+                                    </div>
+                                </a>
+                            </li>
+
+
+
+                        </ul>
+
                     </div>
 
                 </div>
@@ -54,6 +191,7 @@
                     </div>
                     <div class="lstacceptedorders list-block media-list virtual-list list-block-search searchbar-found theme-baklava7">
                         <!-- keep it empty -->
+
                     </div>
                 </div>
                 <div id="tab-3" class="tab bg-white">

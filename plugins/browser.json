@@ -30,7 +30,14 @@
     },
     "com.threescreens.cordova.plugin.brotherPrinter.ql": {
       "PACKAGE_NAME": "com.mms.baklava7"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "com.manufacturer.baklava7"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.manufacturer.baklava7"
+    }
+  }
 }
