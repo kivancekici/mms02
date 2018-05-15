@@ -164,13 +164,19 @@ $$(document).on('offline', function() {
     onOffline();
 });
 
+var getPathMedia = function() {
+    var path = window.location.pathname;
+    var phoneGapPath = path.substring(0, path.lastIndexOf('/') + 1);
+    // Return path at www folder
+    return 'file://' + phoneGapPath;
+};
 
 $$('#btnOrdersHistory').on('click', function() {
     /*
     loadPageWithLang('orders_history');
       myApp.closePanel();
       */
-    var myMedia = new Media('./ringtones/android.mp3');
+    var myMedia = new Media(getPathMedia() + 'ringtones/android.mp3');
     myMedia.play();
 });
 
