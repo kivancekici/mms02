@@ -166,15 +166,12 @@ $$(document).on('offline', function() {
 
 
 function playMP3() {
-    var mp3URL = getMediaURL("sounds/android.mp3");
+    var mp3URL = 'cdvfile://localhost/sounds/android.mp3';
     var media = new Media(mp3URL, null, mediaError);
     media.play();
 }
 
-function getMediaURL(s) {
-    if (device.platform.toLowerCase() === "android") return "/android_asset/www/" + s;
-    return s;
-}
+
 
 function mediaError(e) {
     myApp.alert('Media Error');
@@ -184,7 +181,7 @@ function mediaError(e) {
 
 
 $$('#btnOrdersHistory').on('click', function() {
-    myApp.alert('hello');
+
     playMP3();
 
     /*
@@ -195,11 +192,14 @@ $$('#btnOrdersHistory').on('click', function() {
 
 
 $$('#btnLogout').on('*click', function() {
+    var media = new Media('cdvfile://localhost/temporary/sounds/android.mp3', null, mediaError);
+    media.play();
 
+    /*
     window.localStorage.setItem("isLogin", "0");
     checkLoginStatus();
     myApp.closePanel();
-
+    */
 });
 
 
