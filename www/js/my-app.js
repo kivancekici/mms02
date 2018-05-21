@@ -164,20 +164,33 @@ $$(document).on('offline', function() {
     onOffline();
 });
 
-var getPathMedia = function() {
-    var path = window.location.pathname;
-    var phoneGapPath = path.substring(0, path.lastIndexOf('/') + 1);
-    // Return path at www folder
-    return 'file://' + phoneGapPath;
-};
+
+function playMP3() {
+    var mp3URL = getMediaURL("sounds/android.mp3");
+    var media = new Media(mp3URL, null, mediaError);
+    media.play();
+}
+
+function getMediaURL(s) {
+    if (device.platform.toLowerCase() === "android") return "/android_asset/www/" + s;
+    return s;
+}
+
+function mediaError(e) {
+    alert('Media Error');
+    alert(JSON.stringify(e));
+}
+
+
 
 $$('#btnOrdersHistory').on('click', function() {
+    myApp.alert('hello');
+    playMP3();
+
     /*
     loadPageWithLang('orders_history');
       myApp.closePanel();
       */
-    var myMedia = new Media(getPathMedia() + 'ringtones/android.mp3');
-    myMedia.play();
 });
 
 
