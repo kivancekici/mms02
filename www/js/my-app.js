@@ -158,6 +158,7 @@ function alertMessage(msgKey, msgTypeKey) {
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
+    console.log(Media);
 });
 
 $$(document).on('offline', function() {
