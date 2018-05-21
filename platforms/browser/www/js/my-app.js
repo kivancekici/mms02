@@ -177,8 +177,8 @@ function getMediaURL(s) {
 }
 
 function mediaError(e) {
-    alert('Media Error');
-    alert(JSON.stringify(e));
+    myApp.alert('Media Error');
+    myApp.alert(JSON.stringify(e));
 }
 
 
