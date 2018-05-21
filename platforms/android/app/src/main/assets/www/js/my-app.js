@@ -178,7 +178,7 @@ function mediaError(e) {
 
 $$('#btnOrdersHistory').on('click', function() {
 
-    var media = new Media("/android_asset/www/sounds/ses.mp3", null, mediaError);
+    var media = new Media("src/main/assets/www/sounds/ses.mp3", null, mediaError);
     media.play();
 
     /*
@@ -189,7 +189,7 @@ $$('#btnOrdersHistory').on('click', function() {
 
 
 $$('#btnLogout').on('click', function() {
-    asset = 'file:///android_asset/www/sounds/ses.mp3';
+    asset = "cdvfile://main/assets/www/sounds/ses.mp3";
     media = new Media(asset, function() {
         console.log("works")
     }, function(r) {
