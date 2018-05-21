@@ -177,7 +177,7 @@ function mediaError(e) {
 
 
 $$('#btnOrdersHistory').on('click', function() {
-    myApp.alert(cordova.file.applicationDirectory);
+
     var media = new Media("/android_asset/www/sounds/ses.mp3", null, mediaError);
     media.play();
 
@@ -189,7 +189,13 @@ $$('#btnOrdersHistory').on('click', function() {
 
 
 $$('#btnLogout').on('click', function() {
-    var media = new Media('file:///android_asset/www/sounds/ses.mp3', null, mediaError);
+    asset = 'file:///android_asset/www/sounds/ses.mp3';
+    media = new Media(asset, function() {
+        console.log("works")
+    }, function(r) {
+        console.log("do not work", r)
+    });
+
     media.play();
 
     /*
