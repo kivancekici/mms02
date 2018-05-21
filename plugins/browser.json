@@ -27,11 +27,10 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.manufacturer.baklava7"
-    }
-  },
-  "dependent_plugins": {
+    },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.manufacturer.baklava7"
     }
-  }
+  },
+  "dependent_plugins": {}
 }
