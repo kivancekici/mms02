@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.manufacturer.baklava7" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Baklava7 Manufacturer</name>
+    <description>
+        Baklava7 Manufacturer App
+    </description>
+    <author email="saglamaskin@gmail.com" href="https://www.linkedin.com/in/askinsaglam/">
+        Aşkın Sağlam
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon platform="android" qualifier="ldpi" src="images/icons/mipmap-mdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="mdpi" src="images/icons/mipmap-mdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="hdpi" src="images/icons/mipmap-hdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="xhdpi" src="images/icons/mipmap-xhdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="xxhdpi" src="images/icons/mipmap-xxhdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="xxxhdpi" src="images/icons/mipmap-xxxhdpi/ic_launcher.png" />
+    <icon platform="android" qualifier="fr-xxhdpi" src="images/icons/mipmap-xxxhdpi/ic_launcher.png" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="Media">
+        <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+    </feature>
+</widget>

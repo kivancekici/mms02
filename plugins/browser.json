@@ -7,31 +7,25 @@
     "files": {}
   },
   "installed_plugins": {
+    "com.threescreens.cordova.plugin.brotherPrinter.ql": {
+      "PACKAGE_NAME": "com.manufacturer.baklava7"
+    },
     "cordova-plugin-console": {
-      "PACKAGE_NAME": "com.mms.baklava7"
+      "PACKAGE_NAME": "com.manufacturer.baklava7"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.mms.baklava7"
-    },
-    "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.mms.baklava7"
-    },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.mms.baklava7"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.mms.baklava7"
-    },
-    "com.threescreens.cordova.plugin.brotherPrinter": {
-      "PACKAGE_NAME": "com.mms.baklava7"
-    },
-    "cordova-plugin-brother-label-printer": {
-      "PACKAGE_NAME": "com.mms.baklava7"
-    },
-    "com.threescreens.cordova.plugin.brotherPrinter.ql": {
-      "PACKAGE_NAME": "com.mms.baklava7"
+      "PACKAGE_NAME": "com.manufacturer.baklava7"
     },
     "cordova-plugin-media": {
+      "PACKAGE_NAME": "com.manufacturer.baklava7"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.manufacturer.baklava7"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.manufacturer.baklava7"
+    },
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.manufacturer.baklava7"
     }
   },
