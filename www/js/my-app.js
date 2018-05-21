@@ -165,11 +165,6 @@ $$(document).on('offline', function() {
 });
 
 
-function playMP3() {
-    var mp3URL = 'cdvfile://localhost/sounds/android.mp3';
-    var media = new Media(mp3URL, null, mediaError);
-    media.play();
-}
 
 
 
@@ -182,7 +177,8 @@ function mediaError(e) {
 
 $$('#btnOrdersHistory').on('click', function() {
 
-    playMP3();
+    var media = new Media("sounds/ses.mp3", null, mediaError);
+    media.play();
 
     /*
     loadPageWithLang('orders_history');
@@ -191,8 +187,8 @@ $$('#btnOrdersHistory').on('click', function() {
 });
 
 
-$$('#btnLogout').on('*click', function() {
-    var media = new Media('cdvfile://localhost/temporary/sounds/android.mp3', null, mediaError);
+$$('#btnLogout').on('click', function() {
+    var media = new Media('cdvfile://localhost/temporary/sounds/ses.mp3', null, mediaError);
     media.play();
 
     /*
