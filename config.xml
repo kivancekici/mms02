@@ -24,7 +24,6 @@
     <icon platform="android" qualifier="fr-xxhdpi" src="images/icons/mipmap-xxxhdpi/ic_launcher.png" />
     <platform name="android">
         <preference name="android-minSdkVersion" value="14" />
-        <preference name="AndroidPersistentFileLocation" value="Compatibility"/>
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
