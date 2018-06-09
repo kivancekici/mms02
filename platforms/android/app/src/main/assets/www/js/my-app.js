@@ -25,7 +25,8 @@ var $$ = Dom7;
 var langIsSelected = window.localStorage.getItem("langIsSelected");
 var selectedLang;
 
-
+var ordersListResult = null;
+var orderDetailListResult = null;
 
 if (langIsSelected == "1") {
     selectedLang = window.localStorage.getItem("lang");
@@ -121,16 +122,12 @@ function checkLoginStatus() {
     try {
         if (userLoggedIn == "1") {
             loadPageWithLang('main');
-
-
         } else {
             loadPageWithLang('login');
-
         }
     } catch (e) {
         myApp.alert(e);
     }
-
 }
 
 
@@ -250,24 +247,24 @@ $$(document).on('pageInit', function(e) {
 
         $$('.btnLogin').on('click', function() {
 
-            loadPageWithLang('main');
 
-            /*
             var email = $$('#txtEmail').val();
             var pass = $$('#txtPassword').val();
-            var response = mobileLogin(email, pass);
+            var uname = $$('#txtUname').val();
+            var response = mobileLogin(email, pass, uname);
 
             if (response != 'NOK') {
-                window.localStorage.setItem("customerId", response);
+                window.localStorage.setItem("supplierId", response);
                 window.localStorage.setItem("isLogin", "1");
                 window.localStorage.setItem('password', pass);
                 window.localStorage.setItem('useremail', email);
+                window.localStorage.setItem('username', uname);
                 checkLoginStatus();
             } else {
                 window.localStorage.setItem("isLogin", "0");
-
+                alertMessage('loginFailedMsg', 'info');
             }
-            */
+
 
         });
 
@@ -275,37 +272,25 @@ $$(document).on('pageInit', function(e) {
 
     if (page.name === 'main') {
 
-        /*
+
         var userLoggedIn = window.localStorage.getItem("isLogin");
 
         if (userLoggedIn == "1") {
-            var userId = window.localStorage.getItem("customerId");
+            var supplierId = window.localStorage.getItem("supplierId");
             var pswd = window.localStorage.getItem("password");
             var email = window.localStorage.getItem("useremail");
+            var uname = window.localStorage.getItem("username");
             //getOrders(); methodu olcak
+
+            ordersListResult = getOrdersList(email, pswd, uname);
+
+            initListOrders();
+            listOrders.items = ordersListResult;
+            listOrders.update();
+        } else {
+            alertMessage('loginFailedMsgGettingOrders', 'info');
         }
 
-
-        
-
-        if (productResultList == null) {
-            productResultList = getSearchResultList(searchKeyWord);
-        }
-
-        initlistProduct();
-        listProductResult.items = productResultList;
-        listProductResult.update();
-
-        
-        if (manufacturersList == null) {
-            manufacturersList = getAllManufacturersList("");
-        }
-
-        initListVirtualManufacturers();
-        listVirtualManufacturers.items = manufacturersList;
-        listVirtualManufacturers.update();
-
-       */
     }
 
     if (page.name === 'language') {
@@ -333,7 +318,24 @@ $$(document).on('pageInit', function(e) {
 
     if (page.name === 'order_details') {
 
+        var pswd = window.localStorage.getItem("password");
+        var email = window.localStorage.getItem("useremail");
+        var uname = window.localStorage.getItem("username");
+        var referenceNo = page.query['reference'];
 
+        orderDetailListResult = getOrderDetails(referenceNo, email, pswd, uname);
+        initOrderDetailList();
+        orderDetailList.items = orderDetailListResult;
+        orderDetailList.update();
+
+
+        $$('.btnAccept').on('click', function() {
+            // setOrderStatus(referenceNum, email, password, uname, orderId, "3");
+        });
+
+        $$('.btnReject').on('click', function() {
+
+        });
     }
 
 });
