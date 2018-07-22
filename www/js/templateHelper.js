@@ -7,7 +7,7 @@ function initListOrders() {
         rowsAfter: 100,
         height: 105,
         template: '<li>' +
-            '<a href="#" onclick="showOrderDetail(' + "'{{reference}}'" + ');" class="item-link item-content">' +
+            '<a href="#" onclick="showOrderDetail(' + "'{{reference}}'" + "," + "'{{id_order}}'" + ');" class="item-link item-content">' +
             '<div class="item-inner">' +
             '<div class="item-title-row">' +
             '<div class="item-title">{{reference}}</div>' +
@@ -21,10 +21,11 @@ function initListOrders() {
     });
 }
 
-function showOrderDetail(referenceNum) {
+function showOrderDetail(referenceNum, orderId) {
 
     dat = {
-        'reference': referenceNum
+        'reference': referenceNum,
+        'orderId': orderId
     }
 
     loadPageWithLangAndData('order_details', dat);
@@ -44,6 +45,30 @@ function initOrderDetailList() {
             '<div class="card-content-inner">Card content</div>' +
             '</div>' +
             '<div class="card-footer">Card footer</div>' +
+            '</li>'
+    });
+}
+
+
+var listAcceptOrders;
+
+function initAcceptedOrdersList() {
+    listAcceptOrders = myApp.virtualList('.lstacceptedorders', {
+        items: [],
+        rowsBefore: 100,
+        rowsAfter: 100,
+        height: 105,
+        template: '<li>' +
+            '<a href="#" onclick="showOrderDetail(' + "'{{reference}}'" + ');" class="item-link item-content">' +
+            '<div class="item-inner">' +
+            '<div class="item-title-row">' +
+            '<div class="item-title">{{reference}}</div>' +
+            '<div class="item-after">{{date_add}}</div>' +
+            '</div>' +
+            '<div class="item-subtitle">New messages from John Doe</div>' +
+            '<div class="item-text color-white">Lorem ipsum dolor sit amet...</div>' +
+            '</div>' +
+            '</a>' +
             '</li>'
     });
 }

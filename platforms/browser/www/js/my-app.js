@@ -27,6 +27,7 @@ var selectedLang;
 
 var ordersListResult = null;
 var orderDetailListResult = null;
+var acceptedOrdersListResult = null;
 
 if (langIsSelected == "1") {
     selectedLang = window.localStorage.getItem("lang");
@@ -36,10 +37,12 @@ if (langIsSelected == "1") {
 }
 
 
+
 // Add view
 var mainView = myApp.addView('.view-main', {
     // domCache: true
 });
+
 
 getLangJson();
 
@@ -49,6 +52,8 @@ setTimeout(function() {
 
 }, 3000);
 
+var orderStatus = { "pedding": 0, "accept": 1, "reject": 2 };
+Object.freeze(OrderStatus);
 
 function onOffline() {
 
@@ -280,13 +285,28 @@ $$(document).on('pageInit', function(e) {
             var pswd = window.localStorage.getItem("password");
             var email = window.localStorage.getItem("useremail");
             var uname = window.localStorage.getItem("username");
-            //getOrders(); methodu olcak
 
-            ordersListResult = getOrdersList(email, pswd, uname);
+            try {
+                ordersListResult = getOrdersList(email, pswd, uname);
+                initListOrders();
+                listOrders.items = ordersListResult;
+                listOrders.update();
+            } catch (error) {
+                myApp.alert(error);
+            }
 
-            initListOrders();
-            listOrders.items = ordersListResult;
-            listOrders.update();
+            try {
+                acceptedOrdersListResult = getOrderListByStatus(email, pswd, uname, orderStatus.accept);
+                initAcceptedOrdersList();
+                listAcceptOrders.items = acceptedOrdersListResult;
+                listAcceptOrders.update();
+            } catch (error) {
+                myApp.alert(error);
+            }
+
+
+
+
         } else {
             alertMessage('loginFailedMsgGettingOrders', 'info');
         }
@@ -322,6 +342,7 @@ $$(document).on('pageInit', function(e) {
         var email = window.localStorage.getItem("useremail");
         var uname = window.localStorage.getItem("username");
         var referenceNo = page.query['reference'];
+        var orderId = page.query['orderId'];
 
         orderDetailListResult = getOrderDetails(referenceNo, email, pswd, uname);
         initOrderDetailList();
@@ -330,11 +351,11 @@ $$(document).on('pageInit', function(e) {
 
 
         $$('.btnAccept').on('click', function() {
-            // setOrderStatus(referenceNum, email, password, uname, orderId, "3");
+            setOrderStatus(referenceNo, email, password, uname, orderId, orderStatus.accept);
         });
 
         $$('.btnReject').on('click', function() {
-
+            setOrderStatus(referenceNo, email, password, uname, orderId, orderStatus.reject);
         });
     }
 

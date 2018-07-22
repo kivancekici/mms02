@@ -75,6 +75,27 @@ function getOrdersList(email, pswd, uname) {
     }
 }
 
+function getOrderListByStatus(email, password, uname, status) {
+
+    var data = {
+        "opr": "getOrdersListPerStatus",
+        "email": email,
+        "pswd": password,
+        "uname": uname,
+        "status": status
+    }
+
+    var result = restfulPostCall(orderData);
+
+    if (result != "Error") {
+        return result;
+    } else {
+        return "NOK";
+    }
+
+
+}
+
 
 function getOrderDetails(referenceNum, email, password, uname) {
 
