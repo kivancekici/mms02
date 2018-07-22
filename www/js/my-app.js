@@ -257,7 +257,7 @@ $$(document).on('pageInit', function(e) {
             var pass = $$('#txtPassword').val();
             var uname = $$('#txtUname').val();
             var response = mobileLogin(email, pass, uname);
-
+            myApp.alert(response);
             if (response != 'NOK') {
                 window.localStorage.setItem("supplierId", response);
                 window.localStorage.setItem("isLogin", "1");
@@ -286,25 +286,16 @@ $$(document).on('pageInit', function(e) {
             var email = window.localStorage.getItem("useremail");
             var uname = window.localStorage.getItem("username");
 
-            try {
-                ordersListResult = getOrdersList(email, pswd, uname);
-                initListOrders();
-                listOrders.items = ordersListResult;
-                listOrders.update();
-            } catch (error) {
-                myApp.alert(error);
-            }
-
-            try {
-                acceptedOrdersListResult = getOrderListByStatus(email, pswd, uname, orderStatus.accept);
-                initAcceptedOrdersList();
-                listAcceptOrders.items = acceptedOrdersListResult;
-                listAcceptOrders.update();
-            } catch (error) {
-                myApp.alert(error);
-            }
+            ordersListResult = getOrdersList(email, pswd, uname);
+            initListOrders();
+            listOrders.items = ordersListResult;
+            listOrders.update();
 
 
+            acceptedOrdersListResult = getOrderListByStatus(email, pswd, uname, orderStatus.accept);
+            initAcceptedOrdersList();
+            listAcceptOrders.items = acceptedOrdersListResult;
+            listAcceptOrders.update();
 
 
         } else {
