@@ -287,19 +287,26 @@ $$(document).on('pageInit', function(e) {
             var uname = window.localStorage.getItem("username");
 
             ordersListResult = getOrderListByStatus(email, pswd, uname, "0");
-            initListOrders();
-            listOrders.items = ordersListResult;
-            listOrders.update();
-
             acceptedOrdersListResult = getOrderListByStatus(email, pswd, uname, "1");
-            initAcceptedOrdersList();
-            listAcceptOrders.items = acceptedOrdersListResult;
-            listAcceptOrders.update();
-
             rejectedOrdersListResult = getOrderListByStatus(email, pswd, uname, "2");
-            initRejectedOrdersList();
-            listRejectedOrders.items = rejectedOrdersListResult;
-            listRejectedOrders.update();
+
+            if (ordersListResult != "NOK") {
+                initListOrders();
+                listOrders.items = ordersListResult;
+                listOrders.update();
+            }
+
+            if (acceptedOrdersListResult != "NOK") {
+                initAcceptedOrdersList();
+                listAcceptOrders.items = acceptedOrdersListResult;
+                listAcceptOrders.update();
+            }
+
+            if (rejectedOrdersListResult != "NOK") {
+                initRejectedOrdersList();
+                listRejectedOrders.items = rejectedOrdersListResult;
+                listRejectedOrders.update();
+            }
 
         } else {
             alertMessage('loginFailedMsgGettingOrders', 'info');
