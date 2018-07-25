@@ -72,3 +72,38 @@ function initAcceptedOrdersList() {
             '</li>'
     });
 }
+
+var listRejectedOrders;
+
+function initRejectedOrdersList() {
+    listRejectedOrders = myApp.virtualList('.lstrejectedorders', {
+        items: [],
+        rowsBefore: 100,
+        rowsAfter: 100,
+        height: 105,
+        template: '<li class="accordion-item"><a href="#"  class="item-content item-link">' +
+            '<div class="item-inner">' +
+            '<div class="item-title-row">' +
+            '<div class="item-title">{{reference}}</div>' +
+            '<div class="item-after">{{date_add}}</div>' +
+            '</div>' +
+            '<div class="item-subtitle">New messages from John Doe</div>' +
+            '<div class="item-text color-white">Lorem ipsum dolor sit amet...</div>' +
+            '</div>' +
+            '</a>' +
+            '<div class="accordion-item-content">' +
+            '<div class="list-block card-list">' +
+            '<ul>' +
+            '<li class="card bg-green">' +
+            '<div class="card-header">sadsad</div>' +
+            '<div class="card-content">' +
+            '<div class="card-content-inner">Card content</div>' +
+            '</div>' +
+            '<div class="card-footer">Card footer</div>' +
+            '</li>' +
+            '</ul>' +
+            '</div>' +
+            '</div>' +
+            '</li>'
+    });
+}

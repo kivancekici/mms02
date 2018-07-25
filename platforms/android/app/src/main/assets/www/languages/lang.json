@@ -35,7 +35,9 @@
                 "addressError": "Adres eklenemedi",
                 "zipcodeError": "Geçersiz Posta Kodu",
                 "loginFailedMsgGettingOrders": "Lütfen tekrar giriş yapınız.",
-                "loginFailedMsg": "Kullanıcı Adı, Email veya şifre hatalı."
+                "loginFailedMsg": "Kullanıcı Adı, Email veya şifre hatalı.",
+                "orderAcceptedMsg": "Sipariş kabul edildi",
+                "orderAcceptedErrorMsg": "Sipariş kabul edilirken hata oluştu."
             },
             "order_details": {
                 "priceLbl": "Fiyat:",
@@ -97,7 +99,9 @@
                 "delAdrCancelBtn": "Nein",
                 "delAdrError": "Adresse konnte nicht gelöscht werden",
                 "addressError": "Adresse konnte nicht hinzugefügt werden",
-                "zipcodeError": "PLZ ist ungültig"
+                "zipcodeError": "PLZ ist ungültig",
+                "orderAcceptedMsg": "de msg",
+                "orderAcceptedErrorMsg": "de msg"
             },
             "order_details": {
                 "priceLbl": "Preis:",

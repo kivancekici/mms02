@@ -85,7 +85,7 @@ function getOrderListByStatus(email, password, uname, status) {
         "status": status
     }
 
-    var result = restfulPostCall(orderData);
+    var result = restfulPostCall(data);
 
     if (result != "Error") {
         return result;

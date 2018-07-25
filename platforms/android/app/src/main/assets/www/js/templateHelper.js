@@ -72,3 +72,39 @@ function initAcceptedOrdersList() {
             '</li>'
     });
 }
+
+var listRejectedOrders;
+
+function initRejectedOrdersList() {
+    listRejectedOrders = myApp.virtualList('.lstrejectedorders', {
+        items: [],
+        rowsBefore: 100,
+        rowsAfter: 100,
+        height: 105,
+        template: '<li class="accordion-item"><a href="#"  class="item-content item-link">' +
+            '<div class="item-inner">' +
+            '<div class="item-title-row">' +
+            '<div class="item-title">{{reference}} | {{pcfirstname}} {{pclastname}}</div>' +
+            '<div class="item-after">{{order_date_add}}</div>' +
+            '</div>' +
+            '<div class="item-subtitle">{{total_paid_tax_incl}} {{total_shipping_tax_incl}}</div>' +
+            '<div class="item-text">{{address1}} {{address2}} {{postcode}} {{city}} {{phone}} {{phone_mobile}}</div>' +
+            '</div>' +
+            '</a>' +
+            '<div class="accordion-item-content">' +
+            '<div class="list-block card-list">' +
+            '<ul>' +
+            '<li class="card">' +
+            '<div class="card-header">sadsad</div>' +
+            '<div class="card-content">' +
+            '<div class="card-content-inner">Card content</div>' +
+            '</div>' +
+            '<div class="card-footer">Card footer</div>' +
+            '</li>' +
+            '</ul>' +
+            '</div>' +
+            '</div>' +
+            '</li>'
+
+    });
+}
