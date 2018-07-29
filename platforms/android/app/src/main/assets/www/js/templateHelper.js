@@ -10,14 +10,38 @@ function initListOrders() {
             '<a href="#" onclick="showOrderDetail(' + "'{{reference}}'" + "," + "'{{id_order}}'" + ');" class="item-link item-content">' +
             '<div class="item-inner">' +
             '<div class="item-title-row">' +
-            '<div class="item-title"><b>{{reference}}    {{pcfirstname}} {{pclastname}}</b></div>' +
-            '<div class="item-after"><b>{{total_paid_tax_incl}}<b></div>' +
+            '<div class="item-title"><b>{{reference}} | {{pcfirstname}} {{pclastname}}</b></div>' +
+            '<div class="item-after"><b><span class="large badge color-blue">TOTAL : {{total_paid_tax_incl}} €</span><br><span class="medium badge"> VERSAND : {{total_shipping_tax_incl}} €</span></b></div>' +
             '</div>' +
-            '<div class="item-subtitle">{{date_add}}</div>' +
+            '<div class="item-subtitle">{{order_date_add}}</div>' +
             '<div class="item-text">{{address1}} {{address2}} {{postcode}} {{city}} {{phone}} {{phone_mobile}} {{vat_number}}</div>' +
             '</div>' +
             '</a>' +
-            '</li>'
+            '</li>',
+        onItemBeforeInsert: function(list, item) {
+
+            var orderDate = Date.parse(item.childNodes["0"].childNodes["0"].childNodes["1"].innerText);
+
+            var now = moment(new Date()); //todays date
+            var orderTime = moment(new Date(orderDate)); // another date
+            var duration = moment.duration(now.diff(orderTime));
+            var mins = duration.asMinutes();
+
+            if (mins <= 20) {
+                $$(item).addClass("color-green");
+            } else if (20 < mins && mins <= 40) {
+                $$(item).addClass("color-yellow");
+            } else {
+                $$(item).addClass("color-red");
+            }
+            /*
+            var timer = '<br><span class="large badge color-blue">Verbleibende Zeit :' + mins + '</span>';
+            var txt = document.createElement("div");
+            txt.innerHTML = timer;
+            item.childNodes["0"].childNodes["0"].childNodes["0"].childNodes["1"].append(txt);
+             */
+
+        }
     });
 }
 
@@ -38,7 +62,7 @@ function initOrderDetailList() {
         items: [],
         rowsBefore: 100,
         rowsAfter: 100,
-        height: 150,
+        height: 200,
         template: '<li class="card">' +
             '<div class="card-header color-orange"><b>{{product_name}}</b></div>' +
             '<div class="card-content">' +
@@ -65,15 +89,15 @@ function initAcceptedOrdersList() {
         template: '<li class="accordion-item item_{{reference}}"><a href="#" onclick="showAccordionOrderDetail(' + "'{{reference}}'" + ');" class="item-content">' +
             '<div class="item-inner">' +
             '<div class="item-title-row">' +
-            '<div class="item-title"><b>{{reference}} | {{pcfirstname}} {{pclastname}}</b></div>' +
-            '<div class="item-after"><b>TOTAL:{{total_paid_tax_incl}}<br> VERSAND:{{total_shipping_tax_incl}}</b></div>' +
+            '<div class="item-title color-green" ><b>{{reference}} | {{pcfirstname}} {{pclastname}}</b></div>' +
+            '<div class="item-after"><b><span class="large badge color-blue">TOTAL : {{total_paid_tax_incl}} €</span><br><span class="medium badge"> VERSAND : {{total_shipping_tax_incl}} €</span></b></div>' +
             '</div>' +
-            '<div class="item-subtitle">{{order_date_add}}</div>' +
+            '<div class="item-subtitle color-green">{{order_date_add}}</div>' +
             '<div class="item-text">{{address1}} {{address2}} {{postcode}} {{city}} {{phone}} {{phone_mobile}} {{vat_number}}</div>' +
             '</div>' +
             '</a>' +
             '<div class="accordion-item-content">' +
-            '<div class="lstorderdetail_{{reference}} cards-list list-block virtual-list">' +
+            '<div style="margin-top:2% !important;" class="lstorderdetail_{{reference}} cards-list list-block virtual-list">' +
 
             '</div>' +
             '</div>' +
@@ -92,15 +116,15 @@ function initRejectedOrdersList() {
         template: '<li class="accordion-item item_{{reference}}"><a href="#" onclick="showAccordionOrderDetail(' + "'{{reference}}'" + ');" class="item-content">' +
             '<div class="item-inner">' +
             '<div class="item-title-row">' +
-            '<div class="item-title"><b>{{reference}} | {{pcfirstname}} {{pclastname}}</b></div>' +
-            '<div class="item-after"><b>TOTAL:{{total_paid_tax_incl}}<br> VERSAND:{{total_shipping_tax_incl}}</b></div>' +
+            '<div class="item-title color-red"><b>{{reference}} | {{pcfirstname}} {{pclastname}}</b></div>' +
+            '<div class="item-after"><b><span class="large badge color-blue">TOTAL : {{total_paid_tax_incl}} €</span><br><span class="medium badge"> VERSAND : {{total_shipping_tax_incl}} €</span></b></div>' +
             '</div>' +
-            '<div class="item-subtitle">{{order_date_add}}</div>' +
+            '<div class="item-subtitle color-red">{{order_date_add}}</div>' +
             '<div class="item-text">{{address1}} {{address2}} {{postcode}} {{city}} {{phone}} {{phone_mobile}} {{vat_number}}</div>' +
             '</div>' +
             '</a>' +
             '<div class="accordion-item-content">' +
-            '<div class="lstorderdetail_{{reference}} cards-list list-block virtual-list">' +
+            '<div style="margin-top:2% !important;" class="lstorderdetail_{{reference}} cards-list list-block virtual-list">' +
 
             '</div>' +
             '</div>' +
@@ -116,7 +140,7 @@ function initAccordionOrderDetailList(reference) {
         items: [],
         rowsBefore: 100,
         rowsAfter: 100,
-        height: 160,
+        height: 200,
         template: '<li class="card">' +
             '<div class="card-header color-orange"><b>{{product_name}}</b></div>' +
             '<div class="card-content">' +

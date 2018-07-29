@@ -10,6 +10,14 @@
    See https://github.com/apache/cordova-plugin-statusbar
 */
 
+.large {
+    font-size: 17px;
+}
+
+.medium {
+    font-size: 12px;
+}
+
 .statusbar-overlay {
     background: #000000;
 }
@@ -54,7 +62,6 @@
     padding: 1em;
 }
 
-
 .item-text-shopping-cart {
     height: 80px!important;
 }
@@ -62,6 +69,7 @@
 .list-item-manufacturer-details {
     font-family: "Open Sans Condensed", "Helvetica", "Arial", "sans-serif";
 }
+
 
 /*Askin Başla*/
 
@@ -105,31 +113,32 @@ option {
     text-align: center !important;
 }
 
-.bgYesil{
- background-color: #E6EE9C;
+.bgYesil {
+    background-color: #E6EE9C;
 }
 
 .tabbar a.active {
-  color:#788F00 !important;
-  background-color: #ffffff !important;
+    color: #788F00 !important;
+    background-color: #ffffff !important;
 }
 
 .tabbar a.active i {
-  color:#788F00 !important;
+    color: #788F00 !important;
 }
 
-.toolbar-inner {    
-padding: 0px !important;
+.toolbar-inner {
+    padding: 0px !important;
 }
 
 #mainContentBlock {
-margin-bottom: 10px !important;
+    margin-bottom: 10px !important;
 }
 
-.tabs-swipeable-wrap > .tabs > .tab  {
-     overflow: auto;
-     -webkit-overflow-scrolling: touch;
-}    
+.tabs-swipeable-wrap>.tabs>.tab {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 
 /*Askin Bitir*/
 
@@ -139,6 +148,6 @@ margin-bottom: 10px !important;
     background-position: center;
 }
 
-.product-description{
+.product-description {
     font-stretch: expanded;
 }
