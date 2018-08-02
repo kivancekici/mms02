@@ -30,8 +30,8 @@
                 "mailNotOk": "Lütfen geçerli bir E-mail adresi girin",
                 "loginFailedMsgGettingOrders": "Lütfen tekrar giriş yapınız.",
                 "loginFailedMsg": "Kullanıcı Adı, Email veya şifre hatalı.",
-                "orderAcceptedMsg": "Sipariş kabul edildi",
-                "orderAcceptedErrorMsg": "Sipariş kabul edilirken hata oluştu."
+                "orderAcceptedMsg": "Sipariş kabul edildi.",
+                "orderAcceptedErrorMsg": "Sipariş kabul edilirken bir hata oluştu."
             },
             "order_details": {
                 "priceLbl": "Fiyat:",
@@ -52,26 +52,26 @@
         },
         "de": {
             "panel": {
-                "myOrdersHistory": "Ciro",
-                "logoutItem": "Çıkış",
-                "myOrders": "Siparişlerim"
+                "myOrdersHistory": "Meine Umsätze",
+                "logoutItem": "Logout",
+                "myOrders": "Meine Bestellungen"
             },
             "main": {
-                "pendingOrders": "Bekleyen Siparişler",
-                "acceptedOrders": "Kabul Edilen Siparişler",
-                "rejectedOrders": "Red Edilen Siparişler"
+                "pendingOrders": "Noch offene Bestellungen",
+                "acceptedOrders": "Von mir angenommene Bestellungen",
+                "rejectedOrders": "Von mir abgelehnte Bestellungen"
             },
             "login": {
                 "cardHeader": "Login",
                 "pass": "Passwort",
                 "btnlogin": "Login",
-                "username": "de uname"
+                "username": "Benutzername"
             },
             "alertMessages": {
                 "info": "Info",
                 "warning": "Hinweis",
                 "error": "Fehler",
-                "ciroRequiredFieldMsg": "Lütfen tarih ve sipariş durumu seçiniz.",
+                "ciroRequiredFieldMsg": "Bitte wählen Sie den Zeitraum und Zustand der Bestellung (Angenommen/Abgelehnt) aus!",
                 "requiredField": "Die mit markierten Felder sind Pflichtfelder!",
                 "passwordValidation": "Das Passwort muss mindestens 5 Zeichen umfassen.",
                 "passwordMatch": "Passwort stimmt nicht überein",
@@ -86,8 +86,8 @@
                 "delAdrError": "Adresse konnte nicht gelöscht werden",
                 "addressError": "Adresse konnte nicht hinzugefügt werden",
                 "zipcodeError": "PLZ ist ungültig",
-                "orderAcceptedMsg": "de msg",
-                "orderAcceptedErrorMsg": "de msg"
+                "orderAcceptedMsg": "Die Bestellung wurde erfolgreich angenommen.",
+                "orderAcceptedErrorMsg": "Während der Annahme der Bestellung ist ein unerwarteter Fehler aufgetreten"
             },
             "order_details": {
                 "priceLbl": "Preis:",
@@ -101,12 +101,12 @@
                 "manufactLbl": "Hersteller:"
             },
             "ciro": {
-                "selectDateRange": "Tarih Aralığı Seçiniz",
-                "numberLbl": "Adet:",
-                "accepted": "Kabul Edilen Siparişler",
-                "rejected": "Red Edilen Siparişler",
-                "orderStatus": "Sipariş Durumu Seçiniz",
-                "btnShow": "Göster"
+                "selectDateRange": "Bitte wählen Sie einen Zeitraum aus",
+                "numberLbl": "Menge:",
+                "accepted": "Von mir angenommene Bestellungen",
+                "rejected": "Von mir abgelehnte Bestellungen",
+                "orderStatus": "Meine abgelehnte und angenommene Bestellungen",
+                "btnShow": "Auflisten"
             }
         }
     }
