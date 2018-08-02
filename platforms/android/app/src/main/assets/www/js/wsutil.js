@@ -96,6 +96,29 @@ function getOrderListByStatus(email, password, uname, status) {
 
 }
 
+function getOrderListByStatusAndDate(email, password, uname, status, dateStart, dateEnd) {
+
+    var data = {
+        "opr": "getOrdersListPerStatusAndDate",
+        "email": email,
+        "pswd": password,
+        "uname": uname,
+        "status": status,
+        "date1": dateStart,
+        "date2": dateEnd
+    }
+
+    var result = restfulPostCall(data);
+
+    if (result != "Error" && result[0].status != "NOK") {
+        return result;
+    } else {
+        return "NOK";
+    }
+
+
+}
+
 
 function getOrderDetails(referenceNum, email, password, uname) {
 

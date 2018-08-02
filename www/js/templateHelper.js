@@ -28,11 +28,11 @@ function initListOrders() {
             var mins = duration.asMinutes();
 
             if (mins <= 20) {
-                $$(item).addClass("color-green");
+                $$(item).addClass("bg-green");
             } else if (20 < mins && mins <= 40) {
-                $$(item).addClass("color-yellow");
+                $$(item).addClass("bg-yellow");
             } else {
-                $$(item).addClass("color-red");
+                $$(item).addClass("bg-red");
             }
             /*
             var timer = '<br><span class="large badge color-blue">Verbleibende Zeit :' + mins + '</span>';
@@ -132,6 +132,55 @@ function initRejectedOrdersList() {
     });
 }
 
+var listCiro;
+
+function initListCiro() {
+    listCiro = myApp.virtualList('.lstciro', {
+        items: [],
+        rowsBefore: 100,
+        rowsAfter: 100,
+        height: 105,
+        template: '<li class="accordion-item item_ciro_{{reference}}"><a href="#" onclick="showCiroOrderDetail(' + "'{{reference}}'" + ');" class="item-content">' +
+            '<div class="item-inner">' +
+            '<div class="item-title-row">' +
+            '<div class="item-title"><b>{{reference}} | {{pcfirstname}} {{pclastname}}</b></div>' +
+            '<div class="item-after"><b><span class="large badge color-blue">TOTAL : {{total_paid_tax_incl}} €</span><br><span class="medium badge"> VERSAND : {{total_shipping_tax_incl}} €</span></b></div>' +
+            '</div>' +
+            '<div class="item-subtitle">{{order_date_add}}</div>' +
+            '<div class="item-text">{{address1}} {{address2}} {{postcode}} {{city}} {{phone}} {{phone_mobile}} {{vat_number}}</div>' +
+            '</div>' +
+            '</a>' +
+            '<div class="accordion-item-content">' +
+            '<div style="margin-top:2% !important;" class="lstcirodetail_{{reference}} cards-list list-block virtual-list">' +
+
+            '</div>' +
+            '</div>' +
+            '</li>'
+    });
+}
+
+var CiroDetailList;
+
+function initCiroDetailList(reference) {
+    CiroDetailList = myApp.virtualList('.lstcirodetail_' + reference, {
+        items: [],
+        rowsBefore: 100,
+        rowsAfter: 100,
+        height: 200,
+        template: '<li class="card">' +
+            '<div class="card-header color-orange"><b>{{product_name}}</b></div>' +
+            '<div class="card-content">' +
+            '<div class="card-content-inner">' +
+            '<b>Menge:</b> {{product_quantity}} <br>' +
+            '<b>Preis:</b> {{product_price}} <br>' +
+            '<b>Gewicht:</b> {{product_weight}} <br>' +
+            '</div>' +
+            '</div>' +
+            '<div class="card-footer">{{date_add}}</div>' +
+            '</li>'
+    });
+}
+
 
 var AccordionOrderDetailList;
 
@@ -155,6 +204,21 @@ function initAccordionOrderDetailList(reference) {
     });
 }
 
+var ciroDetailListResult = null;
+
+function showCiroOrderDetail(reference) {
+
+    var pswd = window.localStorage.getItem("password");
+    var email = window.localStorage.getItem("useremail");
+    var uname = window.localStorage.getItem("username");
+
+    ciroDetailListResult = getOrderDetails(reference, email, pswd, uname);
+    initCiroDetailList(reference);
+    CiroDetailList.items = ciroDetailListResult;
+    CiroDetailList.update();
+
+    myApp.accordionToggle('.item_ciro_' + reference);
+}
 
 var accordionOrderDetailListResult = null;
 

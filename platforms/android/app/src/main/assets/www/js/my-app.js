@@ -25,6 +25,7 @@ var $$ = Dom7;
 var langIsSelected = window.localStorage.getItem("langIsSelected");
 var selectedLang;
 
+var ciroListResult = null;
 var ordersListResult = null;
 var orderDetailListResult = null;
 var acceptedOrdersListResult = null;
@@ -78,17 +79,20 @@ function changePanelLanguage() {
 
     $$('#logoutItem').text(panelData.logoutItem);
     $$('#myOrdersHistory').text(panelData.myOrdersHistory);
+    $$('#myOrders').text(panelData.myOrders);
 }
 
 
 function hidePanelItems() {
     $$('#btnOrdersHistory').hide();
     $$('#btnLogout').hide();
+    $$('#btnOrders').hide();
 }
 
 function showPanelItems() {
     $$('#btnOrdersHistory').show();
     $$('#btnLogout').show();
+    $$('#btnOrders').show();
 }
 
 function setContextParameter(pageName, key, value) {
@@ -176,17 +180,15 @@ function mediaError(e) {
     myApp.alert(JSON.stringify(e));
 }
 
+$$('#btnOrders').on('click', function() {
+    loadPageWithLang('main');
+    myApp.closePanel();
+});
 
 
 $$('#btnOrdersHistory').on('click', function() {
-
-    var media = new Media("src/main/assets/www/sounds/ses.mp3", null, mediaError);
-    media.play();
-
-    /*
-    loadPageWithLang('orders_history');
-      myApp.closePanel();
-      */
+    loadPageWithLang('ciro');
+    myApp.closePanel();
 });
 
 
@@ -333,6 +335,50 @@ $$(document).on('pageInit', function(e) {
             changePanelLanguage();
         });
 
+    }
+
+    if (page.name === 'ciro') {
+
+        var calendarRange = myApp.calendar({
+            input: '#calendar-range',
+            dateFormat: 'yyyy mm dd',
+            rangePicker: true,
+            cssClass: 'theme-green',
+            closeOnSelect: true,
+            monthNames: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+            monthNamesShort: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+            dayNames: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+            dayNamesShort: ['Son', 'Mon', 'Die', 'Mit', 'Don', 'Fre', 'Sam']
+        });
+
+        $$('.btnShow').on('click', function() {
+
+            var pswd = window.localStorage.getItem("password");
+            var email = window.localStorage.getItem("useremail");
+            var uname = window.localStorage.getItem("username");
+
+            var formData = myApp.formToData('#ciroform');
+
+            var dateRange = formData.dateRange;
+            var status = formData.orderStatus;
+
+            if (dateRange != "" && status != "") {
+                var dates = dateRange.split("-");
+                var startDate = dates[0].trim().replace(/ /g, "-");
+                var endDate = dates[1].trim().replace(/ /g, "-");
+
+                ciroListResult = getOrderListByStatusAndDate(email, pswd, uname, status, startDate, endDate);
+
+                if (ciroListResult != "NOK") {
+                    initListCiro();
+                    listCiro.items = ciroListResult;
+                    listCiro.update();
+                }
+            } else {
+                alertMessage('ciroRequiredFieldMsg', 'info');
+            }
+
+        });
     }
 
 

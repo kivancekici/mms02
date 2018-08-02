@@ -1,0 +1,61 @@
+<div data-page="ciro" class="page navbar-fixed">
+    <div class="navbar bg-baklava7 border-baklava7 color-white">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="link icon-only back backBtn">
+                    <i class="f7-icons color-white">chevron_left</i>
+                </a>
+            </div>
+            <div class="right">
+                <a href="#" class="link icon-only open-panel">
+                    <i class="color-white f7-icons">bars</i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content theme-baklava7">
+        <form id="ciroform" class="list-block">
+            <ul>
+                <li class="item-content">
+                    <div class="item-media itemLogo">
+                        <i class="icon f7-icons">calendar</i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-input">
+                            <input type="text" name="dateRange" readonly id="calendar-range" {{placeholder selectDateRange}}}>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-content">
+                    <div class="item-media itemLogo">
+                        <i class="icon f7-icons">search_strong</i>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-input">
+
+                            <select name="orderStatus" required>
+                                <option value="" disabled selected>{{orderStatus}}</option>
+                                <option value="1">{{accepted}}</option>
+                                <option value="2">{{rejected}}</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+        <div class="list-block">
+            <ul>
+                <li>
+                    <a href="#" class="item-link button button-fill button-raised btnShow">{{btnShow}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="lstciro list-block media-list virtual-list theme-baklava7">
+
+        </div>
+
+    </div>
+</div>

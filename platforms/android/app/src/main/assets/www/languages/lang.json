@@ -2,8 +2,9 @@
     "languages": {
         "tr": {
             "panel": {
-                "myOrdersHistory": "Sipariş Geçmişim",
-                "logoutItem": "Çıkış"
+                "myOrdersHistory": "Ciro",
+                "logoutItem": "Çıkış",
+                "myOrders": "Siparişlerim"
             },
             "main": {
                 "pendingOrders": "Bekleyen Siparişler",
@@ -20,20 +21,13 @@
                 "info": "Bilgi",
                 "warning": "Uyarı",
                 "error": "Hata",
+                "ciroRequiredFieldMsg": "Lütfen tarih ve sipariş durumu seçiniz.",
                 "requiredField": "Lütfen zorunlu alanları doldurunuz",
                 "passwordValidation": "Parola en az 5 karakterden oluşmalıdır",
                 "passwordMatch": "Parolalar eşleşmedi, lütfen kontrol ediniz",
                 "updateOk": "Kullanıcı hesabınız başarı ile güncellenmiştir",
                 "mailNotAvailable": "Mail adresi daha önceden kayıtlıdır",
                 "mailNotOk": "Lütfen geçerli bir E-mail adresi girin",
-                "msgSendError": "Mesaj gönderilirken bir hata oluştu, daha sonra tekrar deneyin",
-                "delAdrTitle": "Adres Silme",
-                "delAdrText": "Adres silme işlemini onaylıyormusunuz?",
-                "delAdrOkBtn": "Evet",
-                "delAdrCancelBtn": "Hayır",
-                "delAdrError": "Adres silinemedi",
-                "addressError": "Adres eklenemedi",
-                "zipcodeError": "Geçersiz Posta Kodu",
                 "loginFailedMsgGettingOrders": "Lütfen tekrar giriş yapınız.",
                 "loginFailedMsg": "Kullanıcı Adı, Email veya şifre hatalı.",
                 "orderAcceptedMsg": "Sipariş kabul edildi",
@@ -44,48 +38,40 @@
                 "numberLbl": "Adet:",
                 "priceDesc": " (Vergi Dahil)",
                 "weightLbl": "Ağırlık:",
-                "weightSelect": "Seçiniz",
-                "addToBasket": "Sepete Ekle",
-                "infoTab": "Bilgi",
-                "nutriValTab": "Besin Değerleri",
-                "manufactLbl": "Üretici:",
                 "btnReject": "Reddet",
                 "btnAccept": "Kabul Et"
+            },
+            "ciro": {
+                "selectDateRange": "Tarih Aralığı Seçiniz",
+                "numberLbl": "Adet:",
+                "accepted": "Kabul Edilen Siparişler",
+                "rejected": "Red Edilen Siparişler",
+                "orderStatus": "Sipariş Durumu Seçiniz",
+                "btnShow": "Göster"
             }
         },
         "de": {
             "panel": {
-                "orderItem": "Bestellen",
-                "orderBoxItem": "Einkaufskorb",
-                "accountItem": "Mein Account",
-                "addressItem": "Meine Adressen",
-                "myOrdersItem": "Meine Bestellungen",
-                "helpItem": "Hilfe",
-                "infoItem": "Über Baklava7",
-                "messageItem": "Postfach",
-                "logoutItem": "Logout",
-                "loginItem": "Login"
+                "myOrdersHistory": "Ciro",
+                "logoutItem": "Çıkış",
+                "myOrders": "Siparişlerim"
             },
             "main": {
-                "allmanufacturers": "Partnerhäuser",
-                "catalogue": "Produktliste",
-                "cancelBtn": "Abbrechen",
-                "searchPlc": "Suchen",
-                "nothingFound": "",
-                "mainSlogan": ""
+                "pendingOrders": "Bekleyen Siparişler",
+                "acceptedOrders": "Kabul Edilen Siparişler",
+                "rejectedOrders": "Red Edilen Siparişler"
             },
             "login": {
                 "cardHeader": "Login",
                 "pass": "Passwort",
                 "btnlogin": "Login",
-                "username": "de uname",
-                "btnforgetpass": "Passwort vergessen",
-                "btnregister": "Registrieren"
+                "username": "de uname"
             },
             "alertMessages": {
                 "info": "Info",
                 "warning": "Hinweis",
                 "error": "Fehler",
+                "ciroRequiredFieldMsg": "Lütfen tarih ve sipariş durumu seçiniz.",
                 "requiredField": "Die mit markierten Felder sind Pflichtfelder!",
                 "passwordValidation": "Das Passwort muss mindestens 5 Zeichen umfassen.",
                 "passwordMatch": "Passwort stimmt nicht überein",
@@ -113,6 +99,14 @@
                 "infoTab": "Mehr Infos",
                 "nutriValTab": "Nährwerte und Zutaten",
                 "manufactLbl": "Hersteller:"
+            },
+            "ciro": {
+                "selectDateRange": "Tarih Aralığı Seçiniz",
+                "numberLbl": "Adet:",
+                "accepted": "Kabul Edilen Siparişler",
+                "rejected": "Red Edilen Siparişler",
+                "orderStatus": "Sipariş Durumu Seçiniz",
+                "btnShow": "Göster"
             }
         }
     }
